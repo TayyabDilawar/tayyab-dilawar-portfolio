@@ -1,92 +1,71 @@
 import Link from "next/link";
-import { ArrowDownRight, Mail } from "lucide-react";
+import { Code2, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
-import { trustedTechnologies } from "@/data/skills";
-import { Badge } from "@/components/ui/badge";
+import { heroRoles } from "@/data/skills";
 import { buttonVariants } from "@/components/ui/button";
-import { Container } from "@/components/ui/container";
-import { CopyEmailButton } from "@/components/ui/copy-email-button";
 import { Magnetic } from "@/components/ui/magnetic";
-import { GitHubIcon, LinkedInIcon } from "@/components/ui/social-icons";
-import { Terminal } from "@/components/ui/terminal";
-
-const socialIcons = {
-  github: GitHubIcon,
-  linkedin: LinkedInIcon,
-  email: Mail,
-  x: Mail,
-};
+import { Typewriter } from "@/components/ui/typewriter";
+import { cn } from "@/lib/utils";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-10 pb-20 sm:pt-16 sm:pb-28">
-      <Container className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-        <div>
-          <Badge>
-            <span className="size-1.5 rounded-full bg-accent" aria-hidden />
-            {profile.availability}
-          </Badge>
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
-            Hi, I&apos;m {profile.name}
-          </h1>
-          <p className="mt-3 font-mono text-sm tracking-[0.18em] text-accent uppercase">
-            {profile.role}
-          </p>
-          <p className="mt-5 max-w-xl text-base leading-7 text-muted sm:text-lg">
-            {profile.headline}
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Magnetic>
-              <Link href="/#projects" className={buttonVariants({ size: "lg" })}>
-                View My Work
-                <ArrowDownRight className="size-4" />
-              </Link>
-            </Magnetic>
-            <Link
-              href="/#contact"
-              className={buttonVariants({ variant: "secondary", size: "lg" })}
-            >
-              Contact Me
-            </Link>
-            <a
-              href={profile.resumeUrl}
-              download
-              className={buttonVariants({ variant: "ghost", size: "lg" })}
-            >
-              Download Resume
-            </a>
-          </div>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            {profile.socials.map((social) => {
-              const Icon = socialIcons[social.icon];
-              return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground"
-                  target={social.href.startsWith("http") ? "_blank" : undefined}
-                  rel={social.href.startsWith("http") ? "noreferrer" : undefined}
-                >
-                  <Icon className="size-4" />
-                  {social.label}
-                </a>
-              );
-            })}
-            <CopyEmailButton />
-          </div>
-          <div className="mt-8 flex flex-wrap gap-2">
-            {trustedTechnologies.slice(0, 6).map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+    <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
+      <div className="dot-grid pointer-events-none absolute inset-0" aria-hidden />
+      <div
+        className="glow-orb -left-48 -top-48 size-[700px] bg-[radial-gradient(circle,rgba(14,165,233,0.22)_0%,transparent_65%)]"
+        aria-hidden
+      />
+      <div
+        className="glow-orb -right-24 -bottom-36 size-[600px] bg-[radial-gradient(circle,rgba(99,102,241,0.18)_0%,transparent_65%)]"
+        aria-hidden
+      />
+      <div
+        className="glow-orb top-[35%] left-[55%] size-[350px] bg-[radial-gradient(circle,rgba(217,70,239,0.16)_0%,transparent_65%)]"
+        aria-hidden
+      />
+
+      <div className="relative z-10 mx-auto max-w-[860px] px-6 text-center">
+        <div className="mb-9 inline-flex items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-[18px] py-1.5 font-mono text-[12px] font-semibold tracking-[0.12em] text-cyan uppercase">
+          <span className="badge-dot size-[7px] rounded-full bg-cyan" aria-hidden />
+          {profile.availability}
         </div>
-        <Terminal className="lg:translate-y-4" />
-      </Container>
+
+        <h1>
+          <span className="mb-[0.15em] block text-[clamp(3.2rem,8vw,6.4rem)] leading-none font-extrabold tracking-[-0.06em] text-gradient">
+            {profile.name}
+          </span>
+          <span className="block text-[clamp(1.4rem,3.4vw,2.4rem)] font-light tracking-tight text-muted">
+            <Typewriter words={heroRoles} />
+          </span>
+        </h1>
+
+        <p className="mx-auto mt-7 max-w-[540px] text-[1.05rem] leading-8 text-muted">
+          {profile.headline}
+        </p>
+
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <Magnetic>
+            <Link href="/#contact" className={cn(buttonVariants({ size: "lg" }))}>
+              <Mail className="size-4" />
+              Get In Touch
+            </Link>
+          </Magnetic>
+          <Magnetic>
+            <Link
+              href="/#projects"
+              className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+            >
+              <Code2 className="size-4" />
+              View My Work
+            </Link>
+          </Magnetic>
+        </div>
+      </div>
+
+      <div className="absolute bottom-9 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5 font-mono text-[11px] tracking-[0.22em] text-muted-foreground uppercase">
+        <span>scroll</span>
+        <span className="scroll-bar h-11 w-px bg-[linear-gradient(to_bottom,transparent,var(--cyan))]" />
+      </div>
     </section>
   );
 }

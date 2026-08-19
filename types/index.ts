@@ -47,9 +47,17 @@ export type SkillCategory =
   | "DevOps / Tools"
   | "Other";
 
+export interface SkillGauge {
+  name: string;
+  percent: number;
+}
+
 export interface SkillGroup {
   category: SkillCategory;
+  icon: string;
+  variant: "cyan" | "violet" | "pink" | "amber";
   items: string[];
+  gauges: SkillGauge[];
 }
 
 export interface ArchitectureLayer {
@@ -93,7 +101,7 @@ export interface Project {
   architecture: ArchitectureLayer[];
   image: string;
   screenshots: string[];
-  githubUrl: string;
+  githubUrl: string | null;
   liveUrl: string;
   featured: boolean;
   placeholder: boolean;

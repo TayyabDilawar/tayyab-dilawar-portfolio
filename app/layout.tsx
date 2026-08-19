@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { BackToTop } from "@/components/layout/back-to-top";
 import { CustomCursor } from "@/components/layout/custom-cursor";
 import { Footer } from "@/components/layout/footer";
@@ -12,13 +12,13 @@ import { personJsonLd, websiteJsonLd } from "@/lib/json-ld";
 import { defaultMetadata } from "@/lib/seo";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrains = JetBrains_Mono({
+  variable: "--font-jetbrains",
   subsets: ["latin"],
 });
 
@@ -29,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
+      className={`${jakarta.variable} ${jetbrains.variable} dark h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <ThemeProvider>

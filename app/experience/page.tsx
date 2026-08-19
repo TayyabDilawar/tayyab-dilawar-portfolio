@@ -8,7 +8,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
   title: "Experience",
-  description: `Work history for ${profile.name}. Replace placeholders in data/experience.ts.`,
+  description: `Work history for ${profile.name} — Maxenius, Webfix, Aliva Tech, and Brain Plow.`,
   path: "/experience",
 });
 

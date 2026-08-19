@@ -1,219 +1,153 @@
 import type { Project, ProjectCategory } from "@/types";
 
-/**
- * Placeholder case studies. Marked `placeholder: true` so they are easy to replace.
- * Swap titles, copy, images, and URLs in this file — UI reads from here only.
- */
 export const projects: Project[] = [
   {
-    slug: "mern-saas-platform",
-    title: "MERN SaaS Platform",
+    slug: "northstar-hr",
+    title: "Northstar HR",
     shortDescription:
-      "Placeholder: multi-tenant SaaS with auth, billing-ready accounts, and a React dashboard.",
+      "Multi-tenant HRMS where organizations, roles, leave policies, payroll, and approvals are configured in the database — one product for many companies.",
     detailedDescription:
-      "PLACEHOLDER PROJECT — Replace this with a real product. Example structure for a MERN SaaS: Next.js or React client, Express API, MongoDB tenancy model, JWT sessions, and role-based access for owners and members.",
+      "Northstar HR is a people-operations platform built so each company can configure HR without a fork of the code. Organizations, roles, leave policies, payroll components, and approval workflows live in the database. The product is sold as one codebase to many clients, with tenant isolation and an employee self-service layer for check-in, leave, and payslips.",
     problem:
-      "PLACEHOLDER: Teams needed a shared workspace with isolated data, invitations, and a dashboard that did not require a separate admin app.",
+      "HR products often get forked per client — different leave types, salary components, and approval chains leak into custom code. That does not scale if you want one product for many companies.",
     solution:
-      "PLACEHOLDER: Built a single codebase with tenant-aware APIs, protected routes, and a dashboard that maps 1:1 to the domain model instead of a generic CRUD screen.",
+      "Model the HR domain as data: departments, leave types, salary components, modules, and workflows are tenant-configurable. Isolate tenants with Row Level Security plus application permission checks, and ship ESS so employees can check in, apply for leave, and view payslips without a separate app.",
     results: [
-      "PLACEHOLDER: Replace with a real outcome (latency, conversion, or delivery metric).",
-      "PLACEHOLDER: Replace with a second outcome.",
-      "PLACEHOLDER: Replace with how the system is operated today.",
+      "One multi-tenant product instead of per-client forks.",
+      "Tenant isolation via Row Level Security and application-level permission checks.",
+      "Employee self-service for check-in, leave, and payslips.",
     ],
     category: "SaaS",
-    categories: ["SaaS", "MERN", "Full Stack"],
-    technologies: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Mongoose",
-      "JWT",
-      "Tailwind CSS",
-    ],
-    features: [
-      {
-        title: "Multi-user workspaces",
-        description: "Placeholder: orgs, members, and role-based permissions.",
-      },
-      {
-        title: "Auth & sessions",
-        description: "Placeholder: email/password plus JWT access and refresh flow.",
-      },
-      {
-        title: "Dashboard",
-        description: "Placeholder: usage overview, settings, and member management.",
-      },
-    ],
-    challenges: [
-      {
-        challenge: "PLACEHOLDER: Tenant isolation without over-complicating queries.",
-        solution:
-          "PLACEHOLDER: Scoped every mongoose query by workspace id and enforced it in middleware.",
-      },
-      {
-        challenge: "PLACEHOLDER: Keeping the API contract stable as the UI grew.",
-        solution:
-          "PLACEHOLDER: Versioned resource routes and typed response helpers on the server.",
-      },
-    ],
-    process: [
-      "Discovery and domain modeling",
-      "API and data model",
-      "Auth and tenancy",
-      "Dashboard UI",
-      "Testing and deploy",
-    ],
-    architecture: [
-      { label: "Client", detail: "React dashboard" },
-      { label: "Next.js / React", detail: "App UI and routing" },
-      { label: "API", detail: "REST over HTTPS" },
-      { label: "Node.js / Express", detail: "Auth, tenancy, business logic" },
-      { label: "MongoDB", detail: "Workspace-scoped documents" },
-    ],
-    image: "/images/projects/mern-saas.svg",
-    screenshots: ["/images/projects/mern-saas.svg"],
-    githubUrl: "https://github.com/tayyabdilawar/REPLACE_ME",
-    liveUrl: "https://example.com/REPLACE_ME",
-    featured: true,
-    placeholder: true,
-    year: "2025",
-  },
-  {
-    slug: "nextjs-admin-dashboard",
-    title: "Next.js Admin Dashboard",
-    shortDescription:
-      "Placeholder: SEO-friendly admin UI with server-rendered tables, filters, and RBAC.",
-    detailedDescription:
-      "PLACEHOLDER PROJECT — Replace this with a real dashboard. Example: Next.js App Router, server components for lists, protected mutations via Server Actions or a Node API, and role checks before every write.",
-    problem:
-      "PLACEHOLDER: Operators were managing records in a spreadsheet with no audit trail or permission model.",
-    solution:
-      "PLACEHOLDER: A Next.js admin with typed tables, search, and role-based views so support and admins do not share the same surface.",
-    results: [
-      "PLACEHOLDER: Replace with operational time saved or error rate change.",
-      "PLACEHOLDER: Replace with how auth and roles are enforced.",
-    ],
-    category: "Admin Dashboard",
-    categories: ["Admin Dashboard", "Next.js", "Full Stack"],
+    categories: ["SaaS", "Full Stack", "Next.js", "Admin Dashboard"],
     technologies: [
       "Next.js",
       "TypeScript",
-      "Tailwind CSS",
-      "Node.js",
       "PostgreSQL",
+      "Row Level Security",
+      "Tailwind CSS",
+      "Vercel",
     ],
     features: [
       {
-        title: "Role-based views",
-        description: "Placeholder: admin, editor, and read-only layouts.",
+        title: "Multi-tenant workspaces",
+        description: "Create an organization workspace and sign in to a company-scoped HR system.",
       },
       {
-        title: "Server-rendered lists",
-        description: "Placeholder: filters and pagination without a heavy SPA.",
+        title: "Configurable HR policies",
+        description: "Roles, leave types, payroll components, and approval workflows stored as data.",
       },
       {
-        title: "Audit-friendly mutations",
-        description: "Placeholder: writes go through a single API boundary.",
+        title: "Employee self-service",
+        description: "Employees check in, apply for leave, and view payslips on mobile.",
+      },
+      {
+        title: "Tenant isolation",
+        description: "Row Level Security plus application permission checks between companies.",
       },
     ],
     challenges: [
       {
-        challenge: "PLACEHOLDER: Large tables without shipping a client-only grid.",
+        challenge: "Selling one HR product to many companies without forking the codebase.",
         solution:
-          "PLACEHOLDER: Paginate on the server, stream the page, hydrate only filters and dialogs.",
+          "Keep organizations, roles, leave policies, payroll components, and workflows in the database so each tenant configures the product instead of changing code.",
+      },
+      {
+        challenge: "Keeping company data isolated while still sharing one application.",
+        solution:
+          "Combine Row Level Security with application permission checks so tenant boundaries are enforced in the database and in the app.",
       },
     ],
     process: [
-      "Information architecture",
-      "Auth and roles",
-      "List and detail routes",
-      "Mutations and validation",
-      "Deploy",
+      "Domain model for organizations and HR policies",
+      "Tenant isolation and roles",
+      "Leave, payroll, and approval workflows",
+      "Employee self-service",
+      "Deploy on Vercel",
     ],
     architecture: [
-      { label: "Client", detail: "Admin operators" },
-      { label: "Next.js", detail: "App Router, RSC, metadata" },
-      { label: "API", detail: "Route handlers / Server Actions" },
-      { label: "Node.js", detail: "Authorization and validation" },
-      { label: "PostgreSQL", detail: "Relational records" },
+      { label: "Client", detail: "HR admins and employees (web + mobile ESS)" },
+      { label: "Next.js", detail: "Workspaces, dashboards, and auth screens" },
+      { label: "API", detail: "Tenant-scoped HR operations" },
+      { label: "PostgreSQL", detail: "Orgs, roles, leave, payroll, workflows" },
+      { label: "RLS", detail: "Row-level tenant isolation" },
     ],
-    image: "/images/projects/admin-dashboard.svg",
-    screenshots: ["/images/projects/admin-dashboard.svg"],
-    githubUrl: "https://github.com/tayyabdilawar/REPLACE_ME",
-    liveUrl: "https://example.com/REPLACE_ME",
+    image: "/images/projects/northstar-hr.svg",
+    screenshots: ["/images/projects/northstar-hr.svg"],
+    githubUrl: null,
+    liveUrl: "https://hrms-two-teal.vercel.app/",
     featured: true,
-    placeholder: true,
-    year: "2025",
+    placeholder: false,
+    year: "2026",
   },
   {
-    slug: "ecommerce-platform",
-    title: "E-commerce Platform",
+    slug: "cineplex-tickets",
+    title: "Cineplex Tickets",
     shortDescription:
-      "Placeholder: catalog, cart, checkout, and an admin for products and orders.",
+      "Reserved-seat ticketing for movies, concerts, and live events in Faisalabad — with real-time availability and 10-minute holds.",
     detailedDescription:
-      "PLACEHOLDER PROJECT — Replace this with a real store. Example: Next.js storefront, Express or Route Handler APIs, MongoDB catalogs, Stripe-ready checkout hooks, and Cloudinary for product media.",
+      "Cineplex Tickets is a theater and event booking product. Visitors browse what’s showing, pick reserved seats, and confirm tickets before they disappear. Availability updates in real time, and a 10-minute hold keeps a selection while checkout finishes. The catalog covers movies, concerts, and live events.",
     problem:
-      "PLACEHOLDER: The catalog lived in a CMS that could not express inventory, variants, or order state.",
+      "Walk-up and informal booking makes it easy to double-sell seats. People need to see what is actually free, hold a selection long enough to pay, and walk away with a confirmed ticket.",
     solution:
-      "PLACEHOLDER: A dedicated catalog and order model with a fast storefront and a small admin for products, stock, and fulfillments.",
+      "A public events catalog with reserved seating, real-time availability, and a 10-minute hold so a seat is not sold twice while someone is checking out. Sign-in and registration sit on top of the booking flow.",
     results: [
-      "PLACEHOLDER: Replace with conversion or performance numbers.",
-      "PLACEHOLDER: Replace with checkout reliability notes.",
+      "Reserved seating for movies, concerts, and live events.",
+      "Real-time availability so sold seats are not offered again.",
+      "10-minute holds during checkout to protect a selection.",
     ],
-    category: "E-commerce",
-    categories: ["E-commerce", "Full Stack", "MERN"],
-    technologies: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Cloudinary",
-    ],
+    category: "Full Stack",
+    categories: ["Full Stack", "Next.js"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     features: [
       {
-        title: "Product catalog",
-        description: "Placeholder: variants, images, and stock.",
+        title: "Event catalog",
+        description: "Now showing for movies, concerts, and live events.",
       },
       {
-        title: "Cart and checkout",
-        description: "Placeholder: session cart with a payment-provider hook.",
+        title: "Reserved seating",
+        description: "Pick seats instead of general admission.",
       },
       {
-        title: "Order admin",
-        description: "Placeholder: status pipeline from paid to fulfilled.",
+        title: "Real-time availability",
+        description: "Seat state stays current as other people book.",
+      },
+      {
+        title: "Checkout holds",
+        description: "A 10-minute hold keeps selected seats until the ticket is confirmed.",
       },
     ],
     challenges: [
       {
-        challenge: "PLACEHOLDER: Keeping inventory consistent under concurrent checkouts.",
+        challenge: "Avoiding double-booked seats while people are still checking out.",
         solution:
-          "PLACEHOLDER: Reserve stock in the order transaction and fail closed if the count cannot be decremented.",
+          "Hold selected seats for 10 minutes, then confirm the ticket or release the hold so the seats go back on sale.",
+      },
+      {
+        challenge: "Showing current availability for mixed event types.",
+        solution:
+          "One booking flow for movies, concerts, and live events, with a public catalog and reserved seating on each event.",
       },
     ],
     process: [
-      "Catalog modeling",
-      "Storefront UI",
-      "Cart and checkout API",
-      "Admin for products and orders",
-      "Launch checklist",
+      "Event and seating model",
+      "Availability and holds",
+      "Booking and confirmation",
+      "Auth for ticket holders",
+      "Deploy on Vercel",
     ],
     architecture: [
-      { label: "Client", detail: "Shoppers + admin" },
-      { label: "Next.js", detail: "Storefront and SEO pages" },
-      { label: "API", detail: "Catalog, cart, orders" },
-      { label: "Node.js / Express", detail: "Checkout and inventory" },
-      { label: "MongoDB", detail: "Products, carts, orders" },
+      { label: "Client", detail: "Event browsers and ticket buyers" },
+      { label: "Next.js", detail: "Catalog, seating, checkout, auth" },
+      { label: "API", detail: "Availability, holds, and ticket confirmation" },
+      { label: "Data", detail: "Events, seats, holds, and tickets" },
     ],
-    image: "/images/projects/ecommerce.svg",
-    screenshots: ["/images/projects/ecommerce.svg"],
-    githubUrl: "https://github.com/tayyabdilawar/REPLACE_ME",
-    liveUrl: "https://example.com/REPLACE_ME",
+    image: "/images/projects/cineplex-tickets.svg",
+    screenshots: ["/images/projects/cineplex-tickets.svg"],
+    githubUrl: null,
+    liveUrl: "https://theater-booking-system-blond.vercel.app/",
     featured: true,
-    placeholder: true,
-    year: "2024",
+    placeholder: false,
+    year: "2026",
   },
 ];
 
@@ -221,11 +155,8 @@ export const projectCategories: Array<"All" | ProjectCategory> = [
   "All",
   "Full Stack",
   "Next.js",
-  "MERN",
   "SaaS",
   "Admin Dashboard",
-  "APIs",
-  "E-commerce",
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

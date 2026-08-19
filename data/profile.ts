@@ -5,8 +5,8 @@ import type { Profile } from "@/types";
  * Replace every YOUR_* value before publishing.
  */
 export const profile: Profile = {
-  name: "YOUR_NAME",
-  firstName: "YOUR_NAME",
+  name: "Tayyab Dilawar",
+  firstName: "Tayyab",
   role: "MERN Stack Developer",
   headline:
     "I build production-ready web applications with React, Next.js, Node.js and MongoDB, from frontend architecture to backend APIs and deployment.",
@@ -15,7 +15,7 @@ export const profile: Profile = {
   about:
     "I work across the stack: React and Next.js on the client, Node.js and Express on the server, and MongoDB or PostgreSQL for data. Most of my work is SaaS products, admin dashboards, and API-backed web apps that need to ship and stay maintainable.",
   background:
-    "REPLACE_ME: Add a short background — how you started, the kinds of teams or clients you have worked with, and the problems you typically take on. Do not leave this placeholder in production.",
+    "Full-stack developer based in Faisalabad, Pakistan, with MERN and Next.js experience across internships, product teams, and client work. I specialise in SSR/SSG, REST APIs, and shipping with product, design, and QA.",
   specialization:
     "I specialize in MERN and Next.js applications: authentication, role-based access, REST APIs, third-party integrations, and dashboards that have to hold up in production.",
   enjoysBuilding:
@@ -24,19 +24,18 @@ export const profile: Profile = {
     "Prefer boring, proven architecture over novelty. Keep the UI independent from the data source, write APIs that are explicit, and ship something you can operate after launch.",
   availability: "Available for freelance & full-time opportunities",
   email: "tayyabalidilawar@gmail.com",
-  phone: "YOUR_PHONE",
-  location: "YOUR_LOCATION",
+  phone: "+92 307 7904836",
+  location: "Faisalabad, Pakistan",
   githubUsername: "tayyabdilawar",
   githubUrl: "https://github.com/tayyabdilawar",
-  linkedinUrl: "https://www.linkedin.com/in/YOUR_LINKEDIN",
+  linkedinUrl: "https://www.linkedin.com/in/tayyab-dilawar-aa1460176",
   xUrl: null,
   resumeUrl: "/resume/YOUR_RESUME.pdf",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   stats: [
-    { label: "Years Experience", value: "REPLACE_ME" },
-    { label: "Projects Completed", value: "REPLACE_ME" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Projects Completed", value: "10+" },
     { label: "Technologies", value: "20+" },
-    { label: "Happy Clients", value: "REPLACE_ME" },
   ],
   socials: [
     {
@@ -46,7 +45,7 @@ export const profile: Profile = {
     },
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/YOUR_LINKEDIN",
+      href: "https://www.linkedin.com/in/tayyab-dilawar-aa1460176",
       icon: "linkedin",
     },
     {

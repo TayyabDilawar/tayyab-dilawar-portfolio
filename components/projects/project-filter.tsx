@@ -29,10 +29,10 @@ export function ProjectFilter() {
               aria-selected={active}
               onClick={() => setFilter(category)}
               className={cn(
-                "rounded-full border px-3 py-1.5 text-sm transition-colors",
+                "rounded-full border px-5 py-2 text-sm font-semibold transition-all",
                 active
-                  ? "border-accent bg-accent-soft text-foreground"
-                  : "border-border text-muted hover:text-foreground",
+                  ? "bg-brand border-transparent text-black shadow-[0_4px_20px_rgba(14,165,233,0.35)]"
+                  : "border-border text-muted hover:-translate-y-0.5 hover:border-cyan/40 hover:text-foreground",
               )}
             >
               {category}
@@ -46,8 +46,8 @@ export function ProjectFilter() {
         </p>
       ) : (
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {visible.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {visible.map((project, index) => (
+            <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
       )}

@@ -5,28 +5,18 @@ import { SkillCard } from "@/components/ui/skill-card";
 
 export function Skills() {
   return (
-    <section id="skills" className="reveal scroll-mt-24 py-20 sm:py-28">
+    <section id="skills" className="reveal scroll-mt-24 bg-surface py-24 sm:py-[110px]">
       <Container>
         <SectionHeading
-          eyebrow="Skills"
-          title="The stack I actually ship with."
-          description="Grouped the way the work is grouped: interface, API, data, and the tools that get it to production."
+          align="center"
+          eyebrow="expertise"
+          title="Skills & Technologies"
+          description="A MERN and Next.js stack used to ship APIs, dashboards, and production web apps."
+          className="mb-16"
         />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid overflow-hidden rounded-[20px] border border-border bg-border md:grid-cols-2 xl:grid-cols-3">
           {skillGroups.map((group) => (
-            <div
-              key={group.category}
-              className="rounded-2xl border border-border bg-card p-5"
-            >
-              <h3 className="font-mono text-xs tracking-[0.18em] text-accent uppercase">
-                {group.category}
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <SkillCard key={item} name={item} />
-                ))}
-              </div>
-            </div>
+            <SkillCard key={group.category} group={group} />
           ))}
         </div>
       </Container>

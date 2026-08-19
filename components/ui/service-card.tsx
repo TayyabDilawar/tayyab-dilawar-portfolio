@@ -24,7 +24,7 @@ export function ServiceCard({ service }: { service: Service }) {
   const Icon = icons[service.icon];
 
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:border-accent/35">
+    <article className="flex h-full flex-col rounded-[20px] border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-cyan/35 hover:shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
       <div className="flex size-10 items-center justify-center rounded-xl border border-border bg-accent-soft text-accent">
         <Icon className="size-4" aria-hidden />
       </div>
