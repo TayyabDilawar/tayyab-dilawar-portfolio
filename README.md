@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MERN / Next.js Developer Portfolio
 
-## Getting Started
+Personal portfolio for a MERN Stack developer, built with Next.js 16 (App Router), TypeScript, and Tailwind CSS. Content lives in typed data files so you can replace name, projects, and experience without rewriting UI.
 
-First, run the development server:
+## Features
+
+- Dark-first theme with light and system modes
+- Homepage sections: hero, about, skills, architecture, projects, experience, services, process, GitHub fallback, testimonials, contact
+- Project case studies at `/projects/[slug]`
+- Blog architecture at `/blog` and `/blog/[slug]` (local typed data, CMS-ready)
+- SEO: Metadata API, canonical URLs, Open Graph, JSON-LD, sitemap, robots
+- Accessible forms, keyboard navigation, reduced-motion support
+- Contact form via Server Action with a swappable email provider
+
+## Tech stack
+
+- Next.js 16, React 19, TypeScript
+- Tailwind CSS 4
+- Lucide icons, Motion, next-themes
+- shadcn-style UI primitives (`Button`, tokens, `cn()`)
+
+## Installation
+
+```bash
+npm install
+```
+
+Copy environment variables:
+
+```bash
+copy .env.example .env.local
+```
+
+On macOS/Linux: `cp .env.example .env.local`
+
+## Environment variables
+
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (required in production) |
+| `NEXT_PUBLIC_GITHUB_USERNAME` | GitHub handle shown in the GitHub section |
+| `NEXT_PUBLIC_LINKEDIN_URL` | LinkedIn profile URL |
+| `NEXT_PUBLIC_EMAIL` | Public contact email |
+
+Do not put private API keys in `NEXT_PUBLIC_*` variables. Email provider secrets belong in server-only env vars when you connect Resend, Nodemailer, SendGrid, or Formspree in `lib/email.ts`.
+
+## Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+Lint:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Set `NEXT_PUBLIC_SITE_URL` to the production domain.
+2. Deploy to Vercel (or any Node host that supports Next.js).
+3. Add a PDF at `public/resume/YOUR_RESUME.pdf` or change `resumeUrl` in `data/profile.ts`.
+4. Wire `lib/email.ts` to an email provider before relying on the contact form in production.
 
-## Deploy on Vercel
+## Project structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/                 App Router pages, sitemap, robots, OG image
+components/
+  layout/            Navbar, footer, theme, cursor, progress
+  sections/          Homepage sections
+  ui/                Shared primitives
+  projects/          Filters and architecture diagram
+  seo/               JSON-LD
+data/                Typed content (replace these first)
+lib/                 SEO, utils, contact action, email provider
+types/               Shared TypeScript types
+public/images/       Replaceable SVG covers
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Customization
+
+Edit these files instead of hunting through components:
+
+- `data/profile.ts` — name, bio, email, GitHub, LinkedIn, resume, stats
+- `data/projects.ts` — case studies
+- `data/skills.ts` — technologies
+- `data/experience.ts` — work history
+- `data/services.ts` — services
+- `data/testimonials.ts` — quotes (placeholders until you have permission)
+- `data/blog.ts` — posts
+- `app/globals.css` — design tokens
+
+Placeholder copy is labeled `PLACEHOLDER`, `YOUR_*`, or `placeholder: true`.
+
+## License
+
+Private unless you add a license.
