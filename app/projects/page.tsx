@@ -8,7 +8,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
   title: "Projects",
-  description: `Selected work by ${profile.name} — MERN, Next.js, SaaS, dashboards, and APIs.`,
+  description: `Selected work by ${profile.name} — Northstar HR, Cineplex Tickets, and other full-stack products.`,
   path: "/projects",
 });
 
@@ -31,8 +31,7 @@ export default function ProjectsPage() {
             Case studies.
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
-            Placeholder projects until you replace them in data/projects.ts. Filter by
-            category, then open a write-up.
+            Live products with write-ups for architecture, features, and the problems they solve.
           </p>
           <div className="mt-10">
             <ProjectFilter />

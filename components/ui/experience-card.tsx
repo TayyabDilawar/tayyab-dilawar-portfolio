@@ -1,32 +1,41 @@
 import type { Experience } from "@/types";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
-export function ExperienceCard({ item }: { item: Experience }) {
+export function ExperienceCard({
+  item,
+  index,
+}: {
+  item: Experience;
+  index: number;
+}) {
   return (
-    <article className="relative pl-8">
+    <article className="group relative grid gap-5 rounded-[20px] border border-border bg-card p-6 transition-all hover:translate-x-1 hover:border-cyan/30 sm:grid-cols-[auto_1fr] sm:p-9">
       <span
-        className="absolute top-1.5 left-0 size-3 rounded-full border border-accent bg-background"
+        className={cn(
+          "absolute top-8 left-[-37px] size-4 rounded-full border-[3px] border-background shadow-[0_0_16px_var(--cyan)] sm:left-[-49px]",
+          index % 2 === 0 ? "bg-cyan" : "bg-violet shadow-[0_0_16px_var(--violet)]",
+        )}
         aria-hidden
       />
-      <div className="rounded-2xl border border-border bg-card p-5 sm:p-6">
-        <div className="flex flex-wrap items-center gap-2 text-xs text-muted">
-          <span className="font-mono">
+      <div className="hidden size-[52px] items-center justify-center rounded-[14px] border border-border bg-card-solid text-xl sm:flex">
+        {index === 0 ? "🏢" : "⚡"}
+      </div>
+      <div>
+        <div className="mb-1 flex flex-wrap items-start justify-between gap-2">
+          <h3 className="text-[1.1rem] font-bold">{item.position}</h3>
+          <span className="rounded-full border border-cyan/20 bg-cyan/10 px-3 py-0.5 font-mono text-[11px] font-semibold text-cyan">
             {item.startDate} — {item.endDate}
           </span>
-          <span aria-hidden>·</span>
-          <span>{item.location}</span>
-          {item.placeholder ? (
-            <Badge className="ml-auto">Placeholder</Badge>
-          ) : null}
         </div>
-        <h3 className="mt-3 text-lg font-semibold">{item.position}</h3>
-        <p className="text-sm text-accent">{item.company}</p>
-        <p className="mt-3 text-sm leading-6 text-muted">{item.description}</p>
-        <ul className="mt-4 space-y-2 text-sm text-muted">
+        <p className="mb-1 text-sm font-semibold text-cyan">{item.company}</p>
+        <p className="mb-4 font-mono text-[11px] text-muted-foreground">{item.location}</p>
+        <p className="mb-3 text-sm leading-7 text-muted">{item.description}</p>
+        <ul className="space-y-1.5 text-sm leading-7 text-muted">
           {item.responsibilities.map((responsibility) => (
-            <li key={responsibility} className="flex gap-2">
-              <span className="mt-2 size-1 shrink-0 rounded-full bg-accent" />
-              <span>{responsibility}</span>
+            <li key={responsibility} className="relative pl-5">
+              <span className="absolute left-0 text-violet">→</span>
+              {responsibility}
             </li>
           ))}
         </ul>
@@ -34,11 +43,12 @@ export function ExperienceCard({ item }: { item: Experience }) {
           {item.technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-border px-2.5 py-1 text-xs text-muted"
+              className="rounded-md border border-border bg-card-solid px-2.5 py-1 font-mono text-[11px] font-semibold text-muted"
             >
               {tech}
             </span>
           ))}
+          {item.placeholder ? <Badge>Placeholder</Badge> : null}
         </div>
       </div>
     </article>

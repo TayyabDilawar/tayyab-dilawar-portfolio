@@ -5,16 +5,16 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export function Experience() {
   return (
-    <section id="experience" className="reveal scroll-mt-24 py-20 sm:py-28">
+    <section id="experience" className="reveal scroll-mt-24 py-24 sm:py-[110px]">
       <Container>
         <SectionHeading
-          eyebrow="Experience"
-          title="Roles and the work attached to them."
-          description="Placeholder timeline. Replace company names, dates, and responsibilities in data/experience.ts — do not invent a history in the UI."
+          eyebrow="career"
+          title="Work Experience"
+          description="MERN and Next.js roles from internship through full-stack work at Maxenius."
         />
-        <div className="relative mt-12 space-y-6 before:absolute before:top-2 before:bottom-2 before:left-[5px] before:w-px before:bg-border">
-          {experience.map((item) => (
-            <ExperienceCard key={item.id} item={item} />
+        <div className="relative mt-12 space-y-6 pl-8 sm:pl-11 before:absolute before:top-0 before:bottom-0 before:left-3 before:w-0.5 before:rounded-full before:bg-[linear-gradient(to_bottom,var(--cyan),var(--violet),var(--pink))] before:opacity-50 sm:before:left-5">
+          {experience.map((item, index) => (
+            <ExperienceCard key={item.id} item={item} index={index} />
           ))}
         </div>
       </Container>

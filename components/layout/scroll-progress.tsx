@@ -20,7 +20,7 @@ export function ScrollProgress() {
       aria-hidden
     >
       <div
-        className="h-full bg-accent"
+        className="h-full bg-brand"
         style={{ width: `${Math.min(progress * 100, 100)}%` }}
       />
     </div>

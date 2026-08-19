@@ -15,16 +15,33 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#09090b",
-          color: "#f4f4f5",
+          background: "#000000",
+          color: "#ffffff",
           padding: 72,
         }}
       >
-        <div style={{ fontSize: 22, letterSpacing: 6, color: "#2dd4bf" }}>
-          {profile.role.toUpperCase()}
+        <div
+          style={{
+            fontSize: 22,
+            letterSpacing: 6,
+            color: "#0ea5e9",
+            textTransform: "uppercase",
+          }}
+        >
+          {profile.role}
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-          <div style={{ fontSize: 72, fontWeight: 600 }}>{profile.name}</div>
+          <div
+            style={{
+              fontSize: 72,
+              fontWeight: 800,
+              backgroundImage: "linear-gradient(135deg, #0ea5e9, #6366f1, #d946ef)",
+              backgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            {profile.name}
+          </div>
           <div style={{ fontSize: 28, color: "#a1a1aa", maxWidth: 860 }}>
             {profile.summary}
           </div>

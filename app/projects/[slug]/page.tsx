@@ -75,14 +75,16 @@ export default async function ProjectDetailPage({
               >
                 Live demo
               </a>
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className={buttonVariants({ variant: "secondary" })}
-              >
-                GitHub
-              </a>
+              {project.githubUrl ? (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={buttonVariants({ variant: "secondary" })}
+                >
+                  GitHub
+                </a>
+              ) : null}
             </div>
           </Container>
         </section>
