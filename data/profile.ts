@@ -23,11 +23,11 @@ export const profile: Profile = {
   philosophy:
     "Prefer boring, proven architecture over novelty. Keep the UI independent from the data source, write APIs that are explicit, and ship something you can operate after launch.",
   availability: "Available for freelance & full-time opportunities",
-  email: "YOUR_EMAIL",
+  email: "tayyabalidilawar@gmail.com",
   phone: "YOUR_PHONE",
   location: "YOUR_LOCATION",
-  githubUsername: "YOUR_GITHUB",
-  githubUrl: "https://github.com/YOUR_GITHUB",
+  githubUsername: "tayyabdilawar",
+  githubUrl: "https://github.com/tayyabdilawar",
   linkedinUrl: "https://www.linkedin.com/in/YOUR_LINKEDIN",
   xUrl: null,
   resumeUrl: "/resume/YOUR_RESUME.pdf",
@@ -41,7 +41,7 @@ export const profile: Profile = {
   socials: [
     {
       label: "GitHub",
-      href: "https://github.com/YOUR_GITHUB",
+      href: "https://github.com/tayyabdilawar",
       icon: "github",
     },
     {
@@ -51,7 +51,7 @@ export const profile: Profile = {
     },
     {
       label: "Email",
-      href: "mailto:YOUR_EMAIL",
+      href: "mailto:tayyabalidilawar@gmail.com",
       icon: "email",
     },
   ],
