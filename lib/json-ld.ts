@@ -16,6 +16,7 @@ export function personJsonLd() {
     jobTitle: profile.role,
     url: siteConfig.url,
     email: profile.email,
+    telephone: profile.phone,
     address: {
       "@type": "PostalAddress",
       addressLocality: profile.location,

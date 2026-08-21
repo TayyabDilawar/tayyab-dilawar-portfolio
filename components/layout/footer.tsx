@@ -19,6 +19,9 @@ export function Footer() {
           © {new Date().getFullYear()} {profile.name}. All rights reserved.
         </p>
         <div className="flex gap-6 text-sm text-muted-foreground">
+          <a href={`tel:${profile.phone}`} className="hover:text-cyan">
+            {profile.phone}
+          </a>
           <a href={profile.githubUrl} target="_blank" rel="noreferrer" className="hover:text-cyan">
             GitHub
           </a>

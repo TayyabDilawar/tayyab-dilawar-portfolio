@@ -24,7 +24,7 @@ export const profile: Profile = {
     "Prefer boring, proven architecture over novelty. Keep the UI independent from the data source, write APIs that are explicit, and ship something you can operate after launch.",
   availability: "Available for freelance & full-time opportunities",
   email: "tayyabalidilawar@gmail.com",
-  phone: "+92 307 7904836",
+  phone: "+923077904836",
   location: "Faisalabad, Pakistan",
   githubUsername: "tayyabdilawar",
   githubUrl: "https://github.com/tayyabdilawar",
