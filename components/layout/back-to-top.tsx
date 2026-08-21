@@ -30,12 +30,12 @@ export function BackToTop() {
       aria-label="Back to top"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className={cn(
-        "fixed right-8 bottom-8 z-40 flex size-[50px] items-center justify-center rounded-full border border-border bg-card text-foreground transition-all hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_30px_rgba(14,165,233,0.3)]",
+        "fixed right-8 bottom-8 z-40 flex size-12.5 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_30px_rgba(14,165,233,0.3)]",
         visible ? "opacity-100" : "pointer-events-none opacity-0",
       )}
     >
       <ArrowUp className="relative z-10 size-5" />
-      <svg className="pointer-events-none absolute -inset-1 size-[58px]" viewBox="0 0 58 58" aria-hidden>
+      <svg className="pointer-events-none absolute -inset-1 size-14.5" viewBox="0 0 58 58" aria-hidden>
         <circle
           ref={circleRef}
           cx="29"

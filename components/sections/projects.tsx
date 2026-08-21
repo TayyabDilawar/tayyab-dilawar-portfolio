@@ -9,7 +9,7 @@ export function Projects() {
   const featured = getFeaturedProjects();
 
   return (
-    <section id="projects" className="reveal scroll-mt-24 bg-surface py-24 sm:py-[110px]">
+    <section id="projects" className="reveal scroll-mt-24 bg-surface py-24 sm:py-27.5">
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
@@ -17,7 +17,7 @@ export function Projects() {
             className="sm:text-left"
             eyebrow="projects"
             title="Featured Work"
-            description="Live products: a multi-tenant HRMS and a reserved-seat ticketing system."
+            description="Live products: a random generator suite, reserved-seat ticketing, restaurant POS, and a multi-tenant HRMS."
           />
           <Link href="/projects" className={buttonVariants({ variant: "secondary" })}>
             All projects

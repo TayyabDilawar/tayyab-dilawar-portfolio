@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { profile } from "@/data/profile";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -12,6 +12,12 @@ const contacts = [
     value: "Send a message",
     href: `mailto:${profile.email}`,
     icon: Mail,
+  },
+  {
+    label: "Phone",
+    value: profile.phone,
+    href: `tel:${profile.phone}`,
+    icon: Phone,
   },
   {
     label: "LinkedIn",

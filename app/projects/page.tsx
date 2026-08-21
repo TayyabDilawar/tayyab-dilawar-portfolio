@@ -8,7 +8,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
   title: "Projects",
-  description: `Selected work by ${profile.name} — Northstar HR, Cineplex Tickets, and other full-stack products.`,
+  description: `Selected work by ${profile.name} — Random Word Generator, Restaurant POS, Northstar HR, Cineplex Tickets, and other full-stack products.`,
   path: "/projects",
 });
 
