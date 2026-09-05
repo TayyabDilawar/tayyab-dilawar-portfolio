@@ -1,0 +1,43 @@
+My CMS
+Dashboard
+Posts
+Pages
+Categories
+Tags
+Media
+Users
+Settings
+View site
+Demo User
+Dashboard
+
+Overview of your content and team.
+
+Published posts
+
+0
+
+Drafts
+
+0
+
+Archived
+
+0
+
+Pages
+
+0
+
+Categories
+
+0
+
+Users
+
+1
+
+Recent posts
+View all
+
+No posts yet.

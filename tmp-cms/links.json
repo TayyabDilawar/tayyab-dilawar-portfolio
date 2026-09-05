@@ -1,0 +1,46 @@
+[
+  {
+    "href": "/admin",
+    "text": "My CMS"
+  },
+  {
+    "href": "/admin",
+    "text": "Dashboard"
+  },
+  {
+    "href": "/admin/posts",
+    "text": "Posts"
+  },
+  {
+    "href": "/admin/pages",
+    "text": "Pages"
+  },
+  {
+    "href": "/admin/categories",
+    "text": "Categories"
+  },
+  {
+    "href": "/admin/tags",
+    "text": "Tags"
+  },
+  {
+    "href": "/admin/media",
+    "text": "Media"
+  },
+  {
+    "href": "/admin/users",
+    "text": "Users"
+  },
+  {
+    "href": "/admin/settings",
+    "text": "Settings"
+  },
+  {
+    "href": "/",
+    "text": "View site"
+  },
+  {
+    "href": "/admin/posts",
+    "text": "View all"
+  }
+]

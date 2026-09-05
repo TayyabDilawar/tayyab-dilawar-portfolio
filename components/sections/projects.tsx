@@ -17,7 +17,7 @@ export function Projects() {
             className="sm:text-left"
             eyebrow="projects"
             title="Featured Work"
-            description="Live products: a random generator suite, reserved-seat ticketing, restaurant POS, and a multi-tenant HRMS."
+            description="Live products: a random generator suite, reserved-seat ticketing, restaurant POS, multi-tenant HRMS, and a production CMS."
           />
           <Link href="/projects" className={buttonVariants({ variant: "secondary" })}>
             All projects
