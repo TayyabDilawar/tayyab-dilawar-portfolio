@@ -325,12 +325,103 @@ export const projects: Project[] = [
     image: "/images/projects/northstar-dashboard.png",
     screenshots: [
       "/images/projects/northstar-dashboard.png",
-      "/images/projects/northstar-payroll.png",
+      "/images/projects/northstar-employees.png",
       "/images/projects/northstar-attendance.png",
       "/images/projects/northstar-leave.png",
+      "/images/projects/northstar-payroll.png",
+      "/images/projects/northstar-settings.png",
+      "/images/projects/northstar-ess.png",
+      "/images/projects/northstar-ess-leave.png",
     ],
     githubUrl: null,
     liveUrl: "https://hrms-two-teal.vercel.app/",
+    featured: true,
+    placeholder: false,
+    year: "2026",
+  },
+  {
+    slug: "my-cms",
+    title: "My CMS",
+    shortDescription:
+      "A production-ready content management system — posts, pages, media, categories, tags, users, and SEO defaults with a public blog front.",
+    detailedDescription:
+      "My CMS is a full content platform with an admin workspace and a public site. Editors draft or publish posts, manage pages, organize content with categories and tags, upload media, and control site branding and SEO defaults. The public front lists recent posts and serves the blog while auth covers login, signup, and password recovery.",
+    problem:
+      "Teams often stitch together a blog theme, a media host, and a separate admin without shared status, SEO fields, or a clean publish workflow — drafts, archives, and site branding end up scattered.",
+    solution:
+      "One Next.js + Supabase product: an admin for posts (draft / published / archived), pages, taxonomy, media library, users, and site settings, plus a public blog that reads the same content.",
+    results: [
+      "Admin dashboard with counts for posts, pages, categories, and users.",
+      "Post editor with slug, excerpt, status, featured image, categories, tags, and SEO.",
+      "Public site and blog fed from the same CMS content.",
+    ],
+    category: "Full Stack",
+    categories: ["Full Stack", "Next.js", "Admin Dashboard", "SaaS"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+    features: [
+      {
+        title: "Posts and pages",
+        description: "Create drafts, publish, or archive articles and static pages from one admin.",
+      },
+      {
+        title: "Media library",
+        description: "Upload and reuse images across posts and pages.",
+      },
+      {
+        title: "Taxonomy and users",
+        description: "Categories, tags, and user accounts for the editorial team.",
+      },
+      {
+        title: "Site settings and SEO",
+        description: "Branding, default SEO title/description, and contact details for the public site.",
+      },
+    ],
+    challenges: [
+      {
+        challenge: "Keeping admin workflows and the public blog in sync without two content sources.",
+        solution:
+          "Store posts, pages, media, and settings in Supabase and render both the admin and the public front from the same records.",
+      },
+      {
+        challenge: "Giving editors publish control without exposing drafts on the live site.",
+        solution:
+          "Model post status as draft, published, or archived, and only surface published content on the public blog.",
+      },
+    ],
+    process: [
+      "Auth and admin shell",
+      "Posts, pages, and taxonomy",
+      "Media library and users",
+      "Site settings and SEO defaults",
+      "Public blog front",
+      "Deploy on Vercel",
+    ],
+    architecture: [
+      { label: "Public site", detail: "Home, blog, and CMS-managed pages" },
+      { label: "Admin", detail: "Dashboard, editor, media, users, settings" },
+      { label: "Next.js", detail: "App router for public and admin routes" },
+      { label: "Supabase", detail: "Auth, content, and media storage" },
+      { label: "Vercel", detail: "Hosting for the CMS and public site" },
+    ],
+    image: "/images/projects/cms-dashboard.png",
+    screenshots: [
+      "/images/projects/cms-dashboard.png",
+      "/images/projects/cms-posts.png",
+      "/images/projects/cms-editor.png",
+      "/images/projects/cms-media.png",
+      "/images/projects/cms-pages.png",
+      "/images/projects/cms-settings.png",
+      "/images/projects/cms-home.png",
+      "/images/projects/cms-users.png",
+    ],
+    githubUrl: null,
+    liveUrl: "https://cms-seven-mu.vercel.app/",
     featured: true,
     placeholder: false,
     year: "2026",
