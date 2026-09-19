@@ -30,7 +30,22 @@ export const profile: Profile = {
   githubUrl: "https://github.com/tayyabdilawar",
   linkedinUrl: "https://www.linkedin.com/in/tayyab-dilawar-aa1460176",
   xUrl: null,
-  resumeUrl: "/resume/YOUR_RESUME.pdf",
+  resumes: [
+    {
+      id: "mern",
+      label: "MERN Stack",
+      description: "Web-focused resume — React, Next.js, Node.js, MongoDB, and full-stack product work.",
+      href: "/resume/Tayyab_Dilawar_mern.pdf",
+      fileName: "Tayyab_Dilawar_MERN.pdf",
+    },
+    {
+      id: "react-native",
+      label: "React Native",
+      description: "Mobile-focused resume — React Native apps, cross-platform delivery, and related stack.",
+      href: "/resume/Tayyab_Dilawar.pdf",
+      fileName: "Tayyab_Dilawar_React_Native.pdf",
+    },
+  ],
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   stats: [
     { label: "Years Experience", value: "5+" },

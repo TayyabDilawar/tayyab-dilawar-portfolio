@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Code2, Mail } from "lucide-react";
+import { Code2, FileText, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
 import { heroRoles } from "@/data/skills";
 import { buttonVariants } from "@/components/ui/button";
@@ -57,6 +57,15 @@ export function Hero() {
             >
               <Code2 className="size-4" />
               View My Work
+            </Link>
+          </Magnetic>
+          <Magnetic>
+            <Link
+              href="/resume"
+              className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+            >
+              <FileText className="size-4" />
+              Resume
             </Link>
           </Magnetic>
         </div>

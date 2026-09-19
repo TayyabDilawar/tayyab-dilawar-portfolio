@@ -69,7 +69,7 @@ npm run lint
 
 1. Set `NEXT_PUBLIC_SITE_URL` to the production domain.
 2. Deploy to Vercel (or any Node host that supports Next.js).
-3. Add a PDF at `public/resume/YOUR_RESUME.pdf` or change `resumeUrl` in `data/profile.ts`.
+3. Add resume PDFs under `public/resume/` and list them in `resumes` inside `data/profile.ts` (view/download at `/resume`).
 4. Wire `lib/email.ts` to an email provider before relying on the contact form in production.
 
 ## Project structure

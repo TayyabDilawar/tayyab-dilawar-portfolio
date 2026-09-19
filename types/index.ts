@@ -9,6 +9,14 @@ export interface ProfileStat {
   value: string;
 }
 
+export interface ProfileResume {
+  id: string;
+  label: string;
+  description: string;
+  href: string;
+  fileName: string;
+}
+
 export interface Profile {
   name: string;
   firstName: string;
@@ -28,7 +36,7 @@ export interface Profile {
   githubUrl: string;
   linkedinUrl: string;
   xUrl: string | null;
-  resumeUrl: string;
+  resumes: ProfileResume[];
   siteUrl: string;
   stats: ProfileStat[];
   socials: SocialLink[];

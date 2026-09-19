@@ -27,6 +27,7 @@ export const footerNav = [
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
   { href: "/services", label: "Services" },
+  { href: "/resume", label: "Resume" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ] as const;

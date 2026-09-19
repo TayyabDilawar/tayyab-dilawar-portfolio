@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/projects",
     "/experience",
     "/services",
+    "/resume",
     "/blog",
     "/contact",
   ].map((path) => ({
