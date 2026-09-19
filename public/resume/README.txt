@@ -1,3 +1,6 @@
-Add your resume PDF here and set `resumeUrl` in data/profile.ts, for example:
+Resume PDFs for the portfolio:
 
-public/resume/YOUR_RESUME.pdf
+- Tayyab_Dilawar_mern.pdf — MERN Stack
+- Tayyab_Dilawar.pdf — React Native
+
+Configured in data/profile.ts and shown at /resume.
