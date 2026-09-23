@@ -8,7 +8,6 @@ import { Projects } from "@/components/sections/projects";
 import { Services } from "@/components/sections/services";
 import { Skills } from "@/components/sections/skills";
 import { TechStack } from "@/components/sections/tech-stack";
-import { Testimonials } from "@/components/sections/testimonials";
 import { TrustedTech } from "@/components/sections/trusted-tech";
 import { WhyWorkWithMe } from "@/components/sections/why-work-with-me";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -36,7 +35,6 @@ export default function Home() {
       <Process />
       <WhyWorkWithMe />
       <Github />
-      <Testimonials />
       <Contact />
     </>
   );
