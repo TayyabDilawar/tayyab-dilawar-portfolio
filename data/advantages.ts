@@ -2,6 +2,12 @@ import type { Advantage } from "@/types";
 
 export const advantages: Advantage[] = [
   {
+    title: "AI-assisted shipping",
+    description:
+      "Claude, Cursor, and Antigravity to move from idea to working app faster — with human review before anything ships.",
+    icon: "sparkles",
+  },
+  {
     title: "Clean, maintainable code",
     description: "Typed modules, small components, and data kept out of the UI.",
     icon: "code",

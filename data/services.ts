@@ -15,6 +15,19 @@ export const services: Service[] = [
     icon: "layers",
   },
   {
+    slug: "ai-assisted-development",
+    title: "AI-Assisted Development",
+    description:
+      "Ship web and mobile apps faster with Claude, Cursor, and Antigravity — always with human review for security, quality, and accessibility.",
+    features: [
+      "Scaffold apps, UIs, and API routes from specs",
+      "Prompt engineering for reliable LLM output",
+      "AI-assisted debug, refactor, and test generation",
+      "LLM API features: chat, content, summarization",
+    ],
+    icon: "sparkles",
+  },
+  {
     slug: "nextjs-development",
     title: "Next.js Development",
     description:

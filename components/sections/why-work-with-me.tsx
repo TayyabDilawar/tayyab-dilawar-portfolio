@@ -8,6 +8,7 @@ import {
   Search,
   Shield,
   Smartphone,
+  Sparkles,
   Zap,
 } from "lucide-react";
 import { advantages } from "@/data/advantages";
@@ -26,6 +27,7 @@ const icons: Record<Advantage["icon"], typeof Code2> = {
   check: CheckCircle2,
   message: MessageSquare,
   "life-buoy": LifeBuoy,
+  sparkles: Sparkles,
 };
 
 export function WhyWorkWithMe() {

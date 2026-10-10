@@ -49,6 +49,7 @@ export interface Skill {
 }
 
 export type SkillCategory =
+  | "AI Tools"
   | "Frontend"
   | "Backend"
   | "Database"
@@ -134,7 +135,7 @@ export interface Service {
   title: string;
   description: string;
   features: string[];
-  icon: "layers" | "globe" | "database" | "api" | "saas" | "layout";
+  icon: "layers" | "globe" | "database" | "api" | "saas" | "layout" | "sparkles";
 }
 
 export interface Testimonial {
@@ -170,7 +171,18 @@ export interface ProcessStep {
 export interface Advantage {
   title: string;
   description: string;
-  icon: "code" | "scale" | "responsive" | "zap" | "search" | "shield" | "plug" | "check" | "message" | "life-buoy";
+  icon:
+    | "code"
+    | "scale"
+    | "responsive"
+    | "zap"
+    | "search"
+    | "shield"
+    | "plug"
+    | "check"
+    | "message"
+    | "life-buoy"
+    | "sparkles";
 }
 
 export interface GithubActivityDay {

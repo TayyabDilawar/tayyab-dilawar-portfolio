@@ -6,16 +6,15 @@ import { cn } from "@/lib/utils";
 
 const lines = [
   { prompt: true, text: "whoami" },
-  { prompt: false, text: "MERN Stack Developer" },
+  { prompt: false, text: "MERN Stack Developer · AI-Assisted" },
   { prompt: true, text: "stack" },
   { prompt: false, text: "React" },
   { prompt: false, text: "Next.js" },
   { prompt: false, text: "Node.js" },
-  { prompt: false, text: "Express" },
   { prompt: false, text: "MongoDB" },
-  { prompt: false, text: "TypeScript" },
+  { prompt: false, text: "Claude / Cursor / Antigravity" },
   { prompt: true, text: "status" },
-  { prompt: false, text: "Building scalable web applications..." },
+  { prompt: false, text: "Shipping web & mobile apps with AI in the loop..." },
 ];
 
 export function Terminal({ className }: { className?: string }) {

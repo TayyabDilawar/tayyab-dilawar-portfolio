@@ -9,9 +9,10 @@ export const experience: Experience[] = [
     endDate: "Present",
     location: "Faisalabad, Pakistan",
     description:
-      "Build and maintain scalable MERN and Next.js applications, with a focus on performance, SEO, and secure authentication.",
+      "Build and maintain scalable MERN and Next.js applications, with a focus on performance, SEO, secure authentication, and AI-assisted delivery.",
     responsibilities: [
       "Build and maintain MERN web applications using modern React patterns and centralised state management.",
+      "Use AI tools (Claude, Cursor, Antigravity) across the lifecycle to accelerate scaffolding, debugging, refactoring, and tests — reviewing every change for quality and security.",
       "Implemented secure authentication and real-time database features with Supabase.",
       "Cut initial load time with code splitting, lazy loading, and caching.",
       "Architect Next.js apps with SSR and SSG for page performance and organic SEO.",
@@ -26,6 +27,8 @@ export const experience: Experience[] = [
       "MongoDB",
       "Supabase",
       "TypeScript",
+      "Claude",
+      "Cursor",
     ],
     placeholder: false,
   },

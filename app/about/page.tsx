@@ -31,7 +31,7 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight">
-            {profile.role} building production web applications.
+            {profile.role} building production apps with AI-assisted delivery.
           </h1>
         </Container>
       </section>

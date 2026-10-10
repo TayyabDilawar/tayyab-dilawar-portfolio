@@ -4,9 +4,11 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 const highlights = [
   "MERN applications",
+  "AI-assisted development",
   "REST APIs & auth",
   "Admin dashboards",
   "SaaS products",
+  "LLM API integrations",
   "Database modeling",
   "Production deploys",
 ];
@@ -21,11 +23,11 @@ export function About() {
     .toUpperCase();
 
   return (
-    <section id="about" className="reveal scroll-mt-24 py-24 sm:py-[110px]">
+    <section id="about" className="reveal scroll-mt-24 py-24 sm:py-27.5">
       <Container className="grid items-center gap-16 lg:grid-cols-[380px_1fr] lg:gap-20">
-        <div className="relative mx-auto size-[280px] sm:size-[360px]">
+        <div className="relative mx-auto size-70 sm:size-90">
           <div className="absolute -inset-0.5 rounded-[34px] bg-brand opacity-60" aria-hidden />
-          <div className="relative flex size-full items-center justify-center overflow-hidden rounded-[32px] border border-border bg-card-solid">
+          <div className="relative flex size-full items-center justify-center overflow-hidden rounded-4xl border border-border bg-card-solid">
             <span className="text-7xl font-extrabold text-gradient sm:text-8xl">
               {initials}
             </span>
@@ -35,14 +37,14 @@ export function About() {
             {profile.role}
           </div>
           <div className="absolute -bottom-4 -left-3 rounded-xl border border-cyan/30 bg-card-solid px-4 py-2.5 text-sm font-bold shadow-xl backdrop-blur">
-            React · Next.js · Node
+            React · Next.js · AI tools
           </div>
         </div>
 
         <div>
           <SectionHeading
             eyebrow="about me"
-            title="Building production web apps, end to end."
+            title="Building production web & mobile apps with AI in the loop."
             description={profile.about}
           />
           <div className="mt-6 space-y-4 text-[1.03rem] leading-8 text-muted">
