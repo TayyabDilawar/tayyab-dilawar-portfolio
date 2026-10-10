@@ -2,6 +2,26 @@ import type { SkillGroup } from "@/types";
 
 export const skillGroups: SkillGroup[] = [
   {
+    category: "AI Tools",
+    icon: "✨",
+    variant: "violet",
+    items: [
+      "Claude",
+      "Cursor",
+      "Google Antigravity",
+      "Prompt Engineering",
+      "AI-Assisted Development",
+      "LLM API Integration",
+      "AI Code Review",
+      "AI Test Generation",
+    ],
+    gauges: [
+      { name: "AI-Assisted Dev", percent: 92 },
+      { name: "Prompt Engineering", percent: 88 },
+      { name: "LLM APIs", percent: 84 },
+    ],
+  },
+  {
     category: "Frontend",
     icon: "💻",
     variant: "cyan",
@@ -67,6 +87,8 @@ export const skillGroups: SkillGroup[] = [
 ];
 
 export const trustedTechnologies = [
+  "Claude",
+  "Cursor",
   "React",
   "Next.js",
   "TypeScript",
@@ -81,6 +103,7 @@ export const trustedTechnologies = [
 
 export const heroRoles = [
   "MERN Stack Developer",
+  "AI-Assisted Developer",
   "Full-Stack Engineer",
   "Next.js Developer",
   "SaaS Builder",

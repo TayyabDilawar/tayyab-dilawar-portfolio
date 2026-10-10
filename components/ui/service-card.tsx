@@ -6,6 +6,7 @@ import {
   LayoutDashboard,
   Plug,
   PanelsTopLeft,
+  Sparkles,
 } from "lucide-react";
 import type { Service } from "@/types";
 import { buttonVariants } from "@/components/ui/button";
@@ -18,6 +19,7 @@ const icons = {
   api: Plug,
   saas: PanelsTopLeft,
   layout: LayoutDashboard,
+  sparkles: Sparkles,
 };
 
 export function ServiceCard({ service }: { service: Service }) {

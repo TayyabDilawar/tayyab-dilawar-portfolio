@@ -14,12 +14,14 @@ export const processSteps: ProcessStep[] = [
   {
     number: "03",
     title: "Development",
-    description: "Build the frontend, backend, and integrations against the agreed contracts.",
+    description:
+      "Build the frontend, backend, and integrations — using AI tools to scaffold and iterate, with human review on every change.",
   },
   {
     number: "04",
     title: "Testing",
-    description: "Check functionality, edge cases, and performance on the flows that matter.",
+    description:
+      "Check functionality, edge cases, and performance; use AI for test drafts, then verify the flows that matter by hand.",
   },
   {
     number: "05",
